@@ -31,8 +31,7 @@ He arrived at his post. His attention turned to the monitor before his eye. Dire
 The monitor lit up several lines in a bleakish blue. Xen scrutinized
 their contents.
 
-<p style="text-align: center;">ORBITAL PERIODS UNTIL FOOD SUPPLY DEPLETION: 2<br><br>INDIVIDUALS AT RISK OF FAMINE: 5.0 x 10<sup>7</sup><br><br>CARRYING CAPACITY OF STARSHIP: 5.0 x 10<sup>7</sup><br><br>STELLAR SYSTEMS SURVEYED: 942<br><br>HABITABLE PLANETS DETECTED: 0
-</p>
+<p style="text-align: center;"><em>ORBITAL PERIODS UNTIL FOOD SUPPLY DEPLETION: 2</em><br><br><em>INDIVIDUALS AT RISK OF FAMINE: 5.0 x 10<sup>7</sup></em><br><br><em>CARRYING CAPACITY OF STARSHIP: 5.0 x 10<sup>7</sup></em><br><br><em>STELLAR SYSTEMS SURVEYED: 942</em><br><br><em>HABITABLE PLANETS DETECTED: 0</em></p>
 
 This did not bode well. The Observatory, and its accompanying space telescope, had been operating for one hundred orbital periods. Yet the fate of the Edoi depended on the next two. Xen opted wisely to ignore his training in statistics.
 
@@ -75,7 +74,9 @@ The resulting reaction touched the limits of transcendence. Innumerable cries of
 The sorrows of the species were behind them at last.
 
 <br>
+
 ---
+
 <br>
 
 A quarter of an orbital period had passed, and Xen shuffled along in line. All that separated him from the starship were the masses to his front, waiting in hushed patience to board. No matter how long he stared at the craft, his awe and disbelief at its scale refused to fade. Its silvery pyramidic body sloped upward to some indeterminate point concealed by the clouds. A thousand rows of innumerable individuals streamed all around him, each one reaching an entry point along the perimeter of its base. He was in awe.
