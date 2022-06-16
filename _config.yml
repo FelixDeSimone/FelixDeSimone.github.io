@@ -18,18 +18,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Cirrostratus Whispers"
+title: "Felix DeSimone"
 email: "rodeo.flagellum@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
-  Tsuyoku Naritai.
+  Felix's Website.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://rodeoflagellum.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://FelixDeSimone.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
-github_username:  "rodeoflagellum"
+github_username:  "FelixDeSimone"
 
 # New fields, not defaulted
-author: Rodeo Flagellum
-copyright: "Rodeo Flagellum"
+author: Felix DeSimone
+copyright: "Felix DeSimone"
 
 # # Should I use this?
 # markdown: pandoc
