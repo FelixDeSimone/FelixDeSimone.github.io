@@ -1,0 +1,126 @@
+---
+layout: default
+---
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    {%- if page.image -%}
+      <img src="{{ page.image | relative_url }}" alt="" class="featured-image-post">
+      <br><br>
+    {%- endif -%}
+
+    {%- if page.header_image -%}
+      <img src="{{ page.header_image | relative_url }}" alt="" class="featured-image-post">
+      <br><br>
+    {%- endif -%}
+
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+
+    {%- if page.desc or page.description -%}
+    <p> <em> {{ page.description }} </em> </p>
+    {%- endif -%}
+
+    {%- if page.tags -%}
+    <p> <span>
+      {% for tag in page.tags %}
+        {% capture tag_name %}{{ tag }}{% endcapture %}
+        {%- if forloop.last -%}
+        <em><a href="/tag/{{ tag_name }}">{{ tag_name }}</a></em>
+        {%- else -%}
+        <em><a href="/tag/{{ tag_name }}">{{ tag_name }}</a></em>,
+        {%- endif -%}
+      {% endfor %}
+
+      {%- if page.specifics -%}
+        <br>Specifics:
+        {% for s in page.specifics %}
+          {%- if forloop.last -%}
+          <em>{{ s }}</em>
+          {%- else -%}
+          <em>{{ s }}</em>,&nbsp;
+          {%- endif -%}
+        {% endfor %}
+      {%- endif -%}
+    </span> </p>
+    {%- endif -%}
+
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.last_edit or page.modified -%}
+      <time class="dt-published" datetime="{{ page.modified | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        - {{ page.modified | date: date_format }}
+      </time> &nbsp;
+      {%- endif -%}
+
+      {%- if page.status -%}
+        {%- if page.type -%}
+         • &nbsp;<a href="https://rodeoflagellum.github.io/site/"><em>{{ page.type }}-{{ page.status }}</em></a> &nbsp;
+        {%- else -%}
+          • &nbsp;<a href="https://rodeoflagellum.github.io/site/"><em>{{ page.status }}</em></a> &nbsp;
+        {%- endif -%}
+      {%- endif -%}
+
+      {%- if page.extent -%}
+         • &nbsp;<a href="https://rodeoflagellum.github.io/site/">Extent</a>: {{ page.extent }} &nbsp;
+      {%- endif -%}
+
+      {%- if page.impact -%}
+         • &nbsp;<a href="https://rodeoflagellum.github.io/site/">Impact</a>: {{ page.impact }} &nbsp;
+      {%- endif -%}
+
+      {%- if page.confidence or page.certainty -%}
+         • &nbsp;<a href="https://rodeoflagellum.github.io/site/">Confidence</a>: {{ page.confidence }} &nbsp;
+      {%- endif -%}
+
+      {%- if page.importance -%}
+         • &nbsp;<a href="https://rodeoflagellum.github.io/site/">Importance</a>: {{ page.importance }} &nbsp;
+      {%- endif -%}
+
+      {%- if page.readibility -%}
+         • &nbsp;<a href="https://rodeoflagellum.github.io/site/">Readibility</a>: {{ page.readibility }} &nbsp;
+      {%- endif -%}
+
+      {%- if page.durability -%}
+         • &nbsp;<a href="https://rodeoflagellum.github.io/site/">Durability</a>: {{ page.durability }} &nbsp;
+      {%- endif -%}
+
+      {%- if page.notes -%}
+        • &nbsp;Post-notes &nbsp;
+      {%- endif -%}
+
+      {%- if page.bibliography -%}
+         • &nbsp;Bibliography &nbsp;
+      {%- endif -%}
+
+      {%- if page.wc or page.word_count -%}
+         • &nbsp;Word Count: {{ page.content | number_of_words }} &nbsp;
+      {%- endif -%}
+
+      {%- if page.inadequacies -%}
+         • &nbsp;<a href="https://rodeoflagellum.github.io/site/">Inadequacies</a>: {{ page.inadequacies }} &nbsp;
+      {%- endif -%}
+
+      {%- if page.reading_time -%}
+         • &nbsp;Read Time: ~{{ page.content | number_of_words | divided_by: 315 }} minutes &nbsp;
+      {%- endif -%}
+
+      {%- if page.author -%}
+        • &nbsp; <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%}</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

@@ -1,0 +1,33 @@
+<h2>All Tags</h2>
+{% capture temptags %}
+  {% for tag in site.tags %}
+    #{{ tag[0] }}#
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtemptags = temptags | split:' ' | sort_natural %}
+
+<ul>
+{% for temptag in sortedtemptags %}
+  {% assign tagitems = temptag | split: '#' %}
+  {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
+
+  {% assign words = tagname | split: '-' %}
+  {% capture titlecase %}
+  {% for word in words %}
+    {% if word.size <= 3 %}
+      {{ word | upcase }}
+    {% else %}
+    {{ word | capitalize }}
+    {% endif %}
+  {% endfor %}{% endcapture %}
+
+  <li><a href="/tag/{{ tagname }}">{{ titlecase }}</a></li>
+{% endfor %}
+</ul>
+
+<!-- {% for temptag in sortedtemptags %}
+  {{ temptag }}<br>
+{% endfor %} -->
+
+<!-- #{{ tag[0] }}# -->
+<!-- {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }} -->
