@@ -5,7 +5,7 @@ date:  2022-06-03 11:00:00 -0400
 permalink: "/pursuit_of_salvation/"
 status: "Finished"
 type: "Story"
-header_image: /assets/2022/pursuit_of_salvation/pursuit_of_salvation.png
+header_image: /assets/2022/pursuit_of_salvation/cent.png
 word_count: "yes"
 reading_time: "yes"
 ---
